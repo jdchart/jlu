@@ -12,13 +12,12 @@ def download_zip(url, path):
         file.write(response.content)
 
     # Create the output folder:
-    out_folder = os.path.splitext(temp_zip)[0]
-    if os.path.isdir(out_folder) == False:
-        os.makedirs(out_folder)
+    if os.path.isdir(path) == False:
+        os.makedirs(path)
 
     # Unzip:
     with zipfile.ZipFile(temp_zip, 'r') as zip_ref:
-        zip_ref.extractall(out_folder)
+        zip_ref.extractall(path)
     
     # Remove temporary ip file:
     os.remove(temp_zip)
