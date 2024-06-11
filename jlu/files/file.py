@@ -21,3 +21,6 @@ def download_zip(url, path):
     
     # Remove temporary ip file:
     os.remove(temp_zip)
+
+
+    print("HELLO FROM JLu")
