@@ -28,7 +28,7 @@ def collect_files(path, acceptedFormats = []):
     finalList = []
     for root, dirs, files in os.walk(path):
         for file in files:
-            if len(acceptedFormats > 0):
+            if len(acceptedFormats) > 0:
                 extension = os.path.splitext(file)[1][1:]
                 if extension in acceptedFormats:
                     finalList.append(os.path.join(root, file))
